@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suryasis Paul</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;margin:0;background:#0b0b0c;color:#e9e9ee}
+    .wrap{max-width:820px;margin:0 auto;padding:32px}
+    header{padding:48px 0 16px}
+    h1{font-size:40px;margin:0}
+    h2{margin:36px 0 12px;font-size:22px;color:#b8b8c2}
+    p,li{line-height:1.65}
+    a{color:#9ad1ff;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .tags a{display:inline-block;margin:6px 8px 0 0;padding:6px 10px;border:1px solid #2b2b33;border-radius:999px}
+    .grid{display:grid;gap:10px}
+    .card{padding:14px 16px;border:1px solid #2b2b33;border-radius:14px;background:#111115}
+    footer{margin:48px 0 24px;color:#9aa}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Suryasis Paul</h1>
+      <p>Tech builder. Travel & history essayist. Motto: <em>Scout nine, master one.</em> — Money is for freedom of moves.</p>
+      <div class="tags">
+        <a href="#writing">Writing</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <section id="writing">
+      <h2>Writing</h2>
+      <div class="grid">
+        <div class="card"><strong>Phnom Penh: Memory & Mercy</strong> — a travelogue on genocide, resilience, and everyday grace.</div>
+        <!-- Add more posts as you publish -->
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card"><strong>Perf Logs Playbook</strong> — C++ micro-benchmarks & profiling notes (coming soon).</div>
+        <div class="card"><strong>Life OS</strong> — bucket lists (career, health, relationships, finance, travel).</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I build systems at work and stories on weekends. Interested in performance engineering, long-term investing, and history that still breathes.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:you@example.com">you@example.com</a> · <a href="https://www.linkedin.com/">LinkedIn</a> · <a href="https://github.com/">GitHub</a></p>
+    </section>
+
+    <footer>© <span id="year"></span> Suryasis Paul</footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
