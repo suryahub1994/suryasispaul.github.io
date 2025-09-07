@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600&display=swap');
+      .glyph { font-family: 'Noto Serif Bengali', serif; fill: #000; opacity: 0.06; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <!-- Row 1 -->
+  <text class="glyph" x="40"  y="70"  font-size="64" transform="rotate(-8 40 70)">অ</text>
+  <text class="glyph" x="160" y="60"  font-size="52" transform="rotate(7 160 60)">আ</text>
+  <text class="glyph" x="270" y="75"  font-size="58" transform="rotate(-5 270 75)">ই</text>
+
+  <!-- Row 2 -->
+  <text class="glyph" x="70"  y="160" font-size="60" transform="rotate(5 70 160)">ক</text>
+  <text class="glyph" x="200" y="150" font-size="66" transform="rotate(-10 200 150)">খ</text>
+  <text class="glyph" x="310" y="165" font-size="56" transform="rotate(12 310 165)">গ</text>
+
+  <!-- Row 3 -->
+  <text class="glyph" x="35"  y="255" font-size="58" transform="rotate(-12 35 255)">চ</text>
+  <text class="glyph" x="150" y="260" font-size="54" transform="rotate(4 150 260)">জ</text>
+  <text class="glyph" x="270" y="245" font-size="62" transform="rotate(-7 270 245)">ট</text>
+
+  <!-- Row 4 -->
+  <text class="glyph" x="60"  y="340" font-size="64" transform="rotate(9 60 340)">ড</text>
+  <text class="glyph" x="190" y="330" font-size="52" transform="rotate(-5 190 330)">ত</text>
+  <text class="glyph" x="300" y="335" font-size="66" transform="rotate(6 300 335)">ন</text>
+</svg>
