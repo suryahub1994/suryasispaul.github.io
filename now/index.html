@@ -131,25 +131,25 @@
             <h2 class="h6 mb-2 mt-0">Recent Blogposts</h2>
             <div id="substack-posts" style="font-size:14px;line-height:1.5">
             </div>
-         <script>
-           const feedURL = "https://suryasis.substack.com/feed"; // replace with yours
-           const api = "https://api.rss2json.com/v1/api.json?rss_url=" + feedURL;
-         
-           fetch(api)
-             .then(res => res.json())
-             .then(data => {
-               const posts = data.items.slice(0, 5); // show 5 recent posts
-               const list = posts.map(p => `
-                 <div style="margin-bottom:.75rem">
-                   <a href="${p.link}" target="_blank" rel="noopener" style="font-weight:600;text-decoration:none">
-                     ${p.title}
-                   </a><br>
-                   <span style="color:#666;font-size:12px">${new Date(p.pubDate).toLocaleDateString()}</span>
-                 </div>
-               `).join("");
-               document.getElementById("substack-posts").innerHTML = list;
-             });
-         </script>
+            <script>
+               const feedURL = "https://suryasis.substack.com/feed"; // replace with yours
+               const api = "https://api.rss2json.com/v1/api.json?rss_url=" + feedURL;
+               
+               fetch(api)
+                 .then(res => res.json())
+                 .then(data => {
+                   const posts = data.items.slice(0, 5); // show 5 recent posts
+                   const list = posts.map(p => `
+                     <div style="margin-bottom:.75rem">
+                       <a href="${p.link}" target="_blank" rel="noopener" style="font-weight:600;text-decoration:none">
+                         ${p.title}
+                       </a><br>
+                       <span style="color:#666;font-size:12px">${new Date(p.pubDate).toLocaleDateString()}</span>
+                     </div>
+                   `).join("");
+                   document.getElementById("substack-posts").innerHTML = list;
+                 });
+            </script>
             <p class="small text-muted mt-3">
                This page tells you what I’m focused on right now. Inspired by
                <a href="https://nownownow.com/about" target="_blank" rel="noopener">the /now movement</a>.
