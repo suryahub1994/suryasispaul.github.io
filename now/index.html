@@ -53,10 +53,32 @@
          /* Make embedded logo smaller */
          #gr_custom_widget_1757512993 img[alt="goodreads.com"] { max-width: 120px; height: auto; }
       </style>
+      <script>
+  fetch("https://web-backend-cu3s6fj76-suryasis-pauls-projects.vercel.app/api/now")
+    .then(res => res.json())
+    .then(data => {
+      const el = document.getElementById("NowCard");
+      if (data.now) {
+        el.textContent = "Now — " + data.now;
+      } else {
+        el.textContent = "Now — (no data)";
+      }
+    })
+    .catch(err => {
+      console.error("Error fetching /api/now:", err);
+
+      // Fallback: use client/browser time
+      const el = document.getElementById("NowCard");
+      const now = new Date();
+      const month = now.toLocaleString("default", { month: "long" });
+      const year = now.getFullYear();
+      el.textContent = `Now — ${month} ${year}`;
+    });
+</script>
    </head>
    <body>
       <div class="container py-5">
-         <h1 class="h3 text-center mb-4">Now — September 2025</h1>
+         <h1 class="h3 text-center mb-4" id="NowCard">Now — September 2025</h1>
          <div class="now-card mx-auto">
             <ul class="list-unstyled mb-4">
                <li>📍 Living in Dubai with my wife.</li>
