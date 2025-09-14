@@ -1,19 +1,117 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog — Suryasis</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — Suryasis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .image-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      background: #f6f6f6;
+      min-height: 220px;
+    }
+    .image-card img {
+      width: 100%;
+      height: 220px;          /* uniform tile height */
+      object-fit: cover;      /* crop nicely, no stretching */
+      transition: transform 0.4s ease;
+      display: block;
+    }
+    .image-card:hover img {
+      transform: scale(1.08);
+    }
+    .image-overlay {
+      position: absolute;
+      inset: auto 0 0 0;      /* bottom overlay */
+      padding: 0.9rem 1rem;
+      background: rgba(0,0,0,0.55);
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .image-card:hover .image-overlay {
+      opacity: 1;
+    }
+    .image-title {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.3;
+    }
+    /* Bengali font style */
+    .bengali {
+      font-family: "Noto Serif Bengali", serif;
+    }
+  </style>
 </head>
 <body>
 <div class="container py-5">
-<h1 class="h3 mb-4">Blog</h1>
-<div class="d-flex gap-2">
-<a class="btn btn-primary" href="/blog/en/">English</a>
-<a class="btn btn-outline-secondary" href="/blog/bn/">বাংলা</a>
-</div>
-<p class="mt-3"><a href="/">Home</a></p>
+
+  <!-- English Blog Section -->
+  <h1 class="h4 mb-4">Blog — English</h1>
+  <div class="row g-4">
+    <!-- Omannama (Substack) -->
+    <div class="col-12 col-md-4">
+      <a href="https://open.substack.com/pub/suryasis/p/omannama-a-diary-from-desert-sands?r=3u3l82&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false"
+         target="_blank" rel="noopener" class="text-decoration-none">
+        <div class="image-card">
+          <img src="/assets/oman_nama.jpeg" alt="Omannama: Desert to Green Mountains">
+          <div class="image-overlay">
+            <h6 class="image-title">Omannama: A Diary from Desert Sands to Green Mountains</h6>
+          </div>
+        </div>
+      </a>
+    </div>
+  <!-- Bengali Blog Section -->
+  <h1 class="h4 mb-4 bengali mt-5">ব্লগ — বাংলা</h1>
+  <div class="row g-4 bengali">
+    <!-- ওমাননামা -->
+    <div class="col-12 col-md-4">
+      <a href="https://suryasis.substack.com/p/990?r=3u3l82" target="_blank" rel="noopener" class="text-decoration-none">
+        <div class="image-card">
+          <img src="/assets/oman_nama.jpeg" alt="ওমাননামা">
+          <div class="image-overlay">
+            <h6 class="image-title">ওমাননামা: মরুর দেশ থেকে সবুজ পাহাড়ের ডায়েরি</h6>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- আদর্শ হিন্দু হোটেল -->
+    <div class="col-12 col-md-4">
+      <a href="https://www.goodreads.com/review/show/7903886465?book_show_action=false" target="_blank" rel="noopener" class="text-decoration-none">
+        <div class="image-card">
+          <img src="/assets/adarsha_hindu.jpg" alt="আদর্শ হিন্দু হোটেল - Book Review">
+          <div class="image-overlay">
+            <h6 class="image-title">আদর্শ হিন্দু হোটেল - Book Review</h6>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- সিয়েম রিপ -->
+    <div class="col-12 col-md-4">
+      <a href="https://suryasis.substack.com/p/3c1" target="_blank" rel="noopener" class="text-decoration-none">
+        <div class="image-card">
+          <img src="/assets/cambodia_picture.jpeg" alt="Siem Reap">
+          <div class="image-overlay">
+            <h6 class="image-title">ক্যাম্বোডিয়ার - তৃতীয় ভাগ – সিয়েম রিপ</h6>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <p class="mt-4 bengali"><a href="/blog/">← ব্লগে ফিরে যান</a></p>
 </div>
 </body>
 </html>
