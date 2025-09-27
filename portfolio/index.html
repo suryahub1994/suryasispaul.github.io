@@ -130,5 +130,15 @@
       </div>
     </div>
   </footer>
+   <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      var here = location.pathname.replace(/\/+$/, '');
+      document.querySelectorAll('.navbar .nav-link').forEach(function(a){
+        var href = a.getAttribute('href').replace(/\/+$/, '');
+        if (href && here === href) a.classList.add('active');
+      });
+    })();
+  </script>
 </body>
 </html>
