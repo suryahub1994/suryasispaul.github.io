@@ -15,20 +15,20 @@
          max-width: 700px;
          }
          .navbar{
-          --bs-bg-opacity: .6;
-          backdrop-filter: saturate(140%) blur(10px);
-          border-bottom: 1px solid rgba(0,0,0,.05);
-        }
-        .navbar .nav-link{
-          border-radius: 12px;
-          padding: .4rem .8rem;
-          transition: background-color .18s ease, color .18s ease;
-        }
-        .navbar .nav-link.active,
-        .navbar .nav-link:hover{
-          background: rgba(13,110,253,.10);
-          color: rgb(13,110,253) !important;
-        }
+         --bs-bg-opacity: .6;
+         backdrop-filter: saturate(140%) blur(10px);
+         border-bottom: 1px solid rgba(0,0,0,.05);
+         }
+         .navbar .nav-link{
+         border-radius: 12px;
+         padding: .4rem .8rem;
+         transition: background-color .18s ease, color .18s ease;
+         }
+         .navbar .nav-link.active,
+         .navbar .nav-link:hover{
+         background: rgba(13,110,253,.10);
+         color: rgb(13,110,253) !important;
+         }
          /* --- Goodreads widget: make it fit nicely inside the card --- */
          .gr_custom_container_1757512993 {
          border: 1px solid #dee2e6;
@@ -67,58 +67,58 @@
          .gr_custom_rating_1757512993 { float: right; }
          /* Make embedded logo smaller */
          #gr_custom_widget_1757512993 img[alt="goodreads.com"] { max-width: 120px; height: auto; }
-       footer{
+         footer{
          color: rgb(var(--ink-dim));
          font-size: .92rem;
-       }
-       footer a{
+         }
+         footer a{
          color: inherit;
          text-decoration: none;
-       }
-       footer a:hover{
+         }
+         footer a:hover{
          color: rgb(13,110,253);
          text-decoration: underline;
-       }
+         }
       </style>
       <script>
-  fetch("https://web-backend-cu3s6fj76-suryasis-pauls-projects.vercel.app/api/now")
-    .then(res => res.json())
-    .then(data => {
-      const el = document.getElementById("NowCard");
-      if (data.now) {
-        el.textContent = "Now — " + data.now;
-      } else {
-        el.textContent = "Now — (no data)";
-      }
-    })
-    .catch(err => {
-      console.error("Error fetching /api/now:", err);
-
-      // Fallback: use client/browser time
-      const el = document.getElementById("NowCard");
-      const now = new Date();
-      const month = now.toLocaleString("default", { month: "long" });
-      const year = now.getFullYear();
-      el.textContent = `Now — ${month} ${year}`;
-    });
-</script>
+         fetch("https://web-backend-cu3s6fj76-suryasis-pauls-projects.vercel.app/api/now")
+           .then(res => res.json())
+           .then(data => {
+             const el = document.getElementById("NowCard");
+             if (data.now) {
+               el.textContent = "Now — " + data.now;
+             } else {
+               el.textContent = "Now — (no data)";
+             }
+           })
+           .catch(err => {
+             console.error("Error fetching /api/now:", err);
+         
+             // Fallback: use client/browser time
+             const el = document.getElementById("NowCard");
+             const now = new Date();
+             const month = now.toLocaleString("default", { month: "long" });
+             const year = now.getFullYear();
+             el.textContent = `Now — ${month} ${year}`;
+           });
+      </script>
    </head>
    <body>
       <nav class="navbar navbar-expand-lg bg-light sticky-top">
-        <div class="container">
-          <a class="navbar-brand fw-semibold" href="/">suryasispaul.me</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+         <div class="container">
+            <a class="navbar-brand fw-semibold" href="/">suryasispaul.me</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div id="nav" class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto gap-1">
-              <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="/portfolio/">Portfolio</a></li>
-              <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-              <li class="nav-item"><a class="nav-link" href="/now/">Now</a></li>
-            </ul>
-          </div>
-        </div>
+            </button>
+            <div id="nav" class="collapse navbar-collapse">
+               <ul class="navbar-nav ms-auto gap-1">
+                  <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/portfolio/">Portfolio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/now/">Now</a></li>
+               </ul>
+            </div>
+         </div>
       </nav>
       <div class="container py-5">
          <h1 class="h3 text-center mb-4" id="NowCard">Now — September 2025</h1>
@@ -133,92 +133,89 @@
             </ul>
             <!-- Goodreads widget INSIDE the central card -->
             <h2 class="h6 mb-2">Currently reading</h2>
-                  <!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
-      <style type="text/css" media="screen">
-  .gr_custom_container_1757612066 {
-    /* customize your Goodreads widget container here*/
-    border: 1px solid gray;
-    border-radius:10px;
-    padding: 10px 5px 10px 5px;
-    background-color: #FFFFFF;
-    color: #000000;
-    width: 100%;
-  }
-  .gr_custom_header_1757612066 {
-    /* customize your Goodreads header here*/
-    border-bottom: 1px solid gray;
-    width: 100%;
-    margin-bottom: 5px;
-    text-align: center;
-    font-size: 120%
-  }
-  .gr_custom_each_container_1757612066 {
-    /* customize each individual book container here */
-    width: 100%;
-    clear: both;
-    margin-bottom: 10px;
-    overflow: auto;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #aaa;
-  }
-  .gr_custom_book_container_1757612066 {
-    /* customize your book covers here */
-    overflow: hidden;
-    height: 60px;
-      float: left;
-      margin-right: 4px;
-      width: 39px;
-  }
-  .gr_custom_author_1757612066 {
-    /* customize your author names here */
-    font-size: 10px;
-  }
-  .gr_custom_tags_1757612066 {
-    /* customize your tags here */
-    font-size: 10px;
-    color: gray;
-  }
-  .gr_custom_rating_1757612066 {
-    /* customize your rating stars here */
-    float: right;
-  }
-</style>
-
-      <div id="gr_custom_widget_1757612066">
-          <div class="gr_custom_container_1757612066">
-    <h2 class="gr_custom_header_1757612066">
-    <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/list/193727580-suryasis-paul?shelf=currently-reading&amp;utm_medium=api&amp;utm_source=custom_widget">Suryasis&#39;s bookshelf: currently-reading</a>
-    </h2>
-      <div class="gr_custom_each_container_1757612066">
-          <div class="gr_custom_book_container_1757612066">
-            <a title="আরণ্যক" rel="nofollow" href="https://www.goodreads.com/review/show/7903895192?utm_medium=api&amp;utm_source=custom_widget"><img alt="আরণ্যক" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1676811673l/3084276._SY75_.jpg" /></a>
-          </div>
-          <div class="gr_custom_rating_1757612066">
-            <span class=" staticStars notranslate"><img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
-          </div>
-          <div class="gr_custom_title_1757612066">
-            <a rel="nofollow" href="https://www.goodreads.com/review/show/7903895192?utm_medium=api&amp;utm_source=custom_widget">আরণ্যক</a>
-          </div>
-          <div class="gr_custom_author_1757612066">
-            by <a rel="nofollow" href="https://www.goodreads.com/author/show/6093739.Bibhutibhushan_Bandyopadhyay">Bibhutibhushan Bandyopadhyay</a>
-          </div>
-          <div class="gr_custom_tags_1757612066">
-            tagged:
-            currently-reading
-          </div>
-      </div>
-  <br style="clear: both"/>
-  <center>
-    <a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0" src="https://s.gr-assets.com/images/widget/widget_logo.gif" /></a>
-  </center>
-  <noscript>
-    Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Suryasis, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
-  </noscript>
-  </div>
-
-      </div>
-      <script src="https://www.goodreads.com/review/custom_widget/193727580.Suryasis's%20bookshelf:%20currently-reading?cover_position=left&cover_size=small&num_books=5&order=d&shelf=currently-reading&show_author=1&show_cover=1&show_rating=1&show_review=1&show_tags=1&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1757612066&widget_text_color=000000&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>
-                 
+            <!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
+            <style type="text/css" media="screen">
+               .gr_custom_container_1757612066 {
+               /* customize your Goodreads widget container here*/
+               border: 1px solid gray;
+               border-radius:10px;
+               padding: 10px 5px 10px 5px;
+               background-color: #FFFFFF;
+               color: #000000;
+               width: 100%;
+               }
+               .gr_custom_header_1757612066 {
+               /* customize your Goodreads header here*/
+               border-bottom: 1px solid gray;
+               width: 100%;
+               margin-bottom: 5px;
+               text-align: center;
+               font-size: 120%
+               }
+               .gr_custom_each_container_1757612066 {
+               /* customize each individual book container here */
+               width: 100%;
+               clear: both;
+               margin-bottom: 10px;
+               overflow: auto;
+               padding-bottom: 4px;
+               border-bottom: 1px solid #aaa;
+               }
+               .gr_custom_book_container_1757612066 {
+               /* customize your book covers here */
+               overflow: hidden;
+               height: 60px;
+               float: left;
+               margin-right: 4px;
+               width: 39px;
+               }
+               .gr_custom_author_1757612066 {
+               /* customize your author names here */
+               font-size: 10px;
+               }
+               .gr_custom_tags_1757612066 {
+               /* customize your tags here */
+               font-size: 10px;
+               color: gray;
+               }
+               .gr_custom_rating_1757612066 {
+               /* customize your rating stars here */
+               float: right;
+               }
+            </style>
+            <div id="gr_custom_widget_1757612066">
+               <div class="gr_custom_container_1757612066">
+                  <h2 class="gr_custom_header_1757612066">
+                     <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/list/193727580-suryasis-paul?shelf=currently-reading&amp;utm_medium=api&amp;utm_source=custom_widget">Suryasis&#39;s bookshelf: currently-reading</a>
+                  </h2>
+                  <div class="gr_custom_each_container_1757612066">
+                     <div class="gr_custom_book_container_1757612066">
+                        <a title="আরণ্যক" rel="nofollow" href="https://www.goodreads.com/review/show/7903895192?utm_medium=api&amp;utm_source=custom_widget"><img alt="আরণ্যক" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1676811673l/3084276._SY75_.jpg" /></a>
+                     </div>
+                     <div class="gr_custom_rating_1757612066">
+                        <span class=" staticStars notranslate"><img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                     </div>
+                     <div class="gr_custom_title_1757612066">
+                        <a rel="nofollow" href="https://www.goodreads.com/review/show/7903895192?utm_medium=api&amp;utm_source=custom_widget">আরণ্যক</a>
+                     </div>
+                     <div class="gr_custom_author_1757612066">
+                        by <a rel="nofollow" href="https://www.goodreads.com/author/show/6093739.Bibhutibhushan_Bandyopadhyay">Bibhutibhushan Bandyopadhyay</a>
+                     </div>
+                     <div class="gr_custom_tags_1757612066">
+                        tagged:
+                        currently-reading
+                     </div>
+                  </div>
+                  <br style="clear: both"/>
+                  <center>
+                     <a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0" src="https://s.gr-assets.com/images/widget/widget_logo.gif" /></a>
+                  </center>
+                  <noscript>
+                     Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Suryasis, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
+                  </noscript>
+               </div>
+            </div>
+            <script src="https://www.goodreads.com/review/custom_widget/193727580.Suryasis's%20bookshelf:%20currently-reading?cover_position=left&cover_size=small&num_books=5&order=d&shelf=currently-reading&show_author=1&show_cover=1&show_rating=1&show_review=1&show_tags=1&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1757612066&widget_text_color=000000&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>
             <h2 class="h6 mb-2">Recent activity on Github</h2>
             <iframe 
                src="https://jandee.vercel.app/suryahub1994" 
@@ -252,30 +249,30 @@
             </p>
          </div>
       </div>
-       <footer class="container pb-5">
-    <div class="pt-3 d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
-      <div>© <span id="year"></span> Suryasis Paul</div>
-      <div class="mt-2 mt-md-0">
-        <a href="/about/">About</a> ·
-        <a href="/portfolio/">Portfolio</a> ·
-        <a href="/blog/">Blog</a> ·
-        <a href="/now/">Now</a>
-      </div>
-    </div>
-  </footer>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Active nav link based on path
-    (function(){
-      var here = location.pathname.replace(/\/+$/, '');
-      document.querySelectorAll('.navbar .nav-link').forEach(function(a){
-        var href = a.getAttribute('href').replace(/\/+$/, '');
-        if (href && here === href) a.classList.add('active');
-      });
-    })();
-  </script>
+      <footer class="container pb-5">
+         <div class="pt-3 d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+            <div>© <span id="year"></span> Suryasis Paul</div>
+            <div class="mt-2 mt-md-0">
+               <a href="/about/">About</a> ·
+               <a href="/portfolio/">Portfolio</a> ·
+               <a href="/blog/">Blog</a> ·
+               <a href="/now/">Now</a>
+            </div>
+         </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+         // Current year in footer
+         document.getElementById('year').textContent = new Date().getFullYear();
+         
+         // Active nav link based on path
+         (function(){
+           var here = location.pathname.replace(/\/+$/, '');
+           document.querySelectorAll('.navbar .nav-link').forEach(function(a){
+             var href = a.getAttribute('href').replace(/\/+$/, '');
+             if (href && here === href) a.classList.add('active');
+           });
+         })();
+      </script>
    </body>
 </html>
