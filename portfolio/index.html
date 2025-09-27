@@ -37,6 +37,21 @@
     display:inline-block; font-size:.75rem; background:#f1f5f9; color:#334155;
     padding:.2rem .5rem; border-radius:.5rem; margin-right:.35rem; margin-bottom:.35rem;
   }
+  .navbar{
+    --bs-bg-opacity: .6;
+    backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,.05);
+  }
+  .navbar .nav-link{
+    border-radius: 12px;
+    padding: .4rem .8rem;
+    transition: background-color .18s ease, color .18s ease;
+  }
+  .navbar .nav-link.active,
+  .navbar .nav-link:hover{
+    background: rgba(13,110,253,.10);
+    color: rgb(13,110,253) !important;
+  }
 </style>
 </head>
 <body>
