@@ -154,5 +154,19 @@
     </div>
   </footer>
 </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Active nav link based on path
+    (function(){
+      var here = location.pathname.replace(/\/+$/, '');
+      document.querySelectorAll('.navbar .nav-link').forEach(function(a){
+        var href = a.getAttribute('href').replace(/\/+$/, '');
+        if (href && here === href) a.classList.add('active');
+      });
+    })();
+  </script>
 </body>
 </html>
