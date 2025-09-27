@@ -1,7 +1,3 @@
-Here’s a **README.md** draft tailored to your repository based on the HTML you shared:
-
----
-
 # 🌐 suryasispaul.me
 
 Personal website of **Suryasis Paul** — engineer, reader, runner, and writer (English & বাংলা).
